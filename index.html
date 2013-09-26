@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JQ Image Drag</title>
+		<link href="http://fonts.googleapis.com/css?family=Antic+Didone:regular" rel="stylesheet" type="text/css" class="style">
+		<!-- add jQuery & UI -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+
+		<!-- add JQ Image Drag plugin -->
+		<script type="text/javascript" src="script/jquery.imagedrag.js"></script>
+		<script type="text/javascript">
+			$(function(){
+
+				$('.wrap').imagedrag({
+					input: "#output",
+					position: "middle"
+				});
+
+			});
+		</script>
+		<style type="text/css">
+			* {
+				margin:0;
+				padding: 0;
+				text-align: center;
+				font-family: 'Antic Didone';
+			}
+			main {
+				display: block;
+			}
+			.wrap {
+				width: 938px;
+				height: 280px;
+				overflow: hidden;
+				margin: auto;
+
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			JQ Image Drag - jQuery Image Drag plugin like Facebook Cover Picture.
+		</header>
+		<main>
+			<article>
+				<h1>Welcome to JQ Image Drag demo page</h1>
+				<br/><br/>
+				<div class="wrap">
+					<img src="image.jpg" alt="JQ Image Drag" style="width:1024px; height:768px;"/>
+				</div>
+				<br/><br/>
+				Position: <input id="output" />
+				<br/><br/>
+			</article>
+		</main>
+		<footer>
+			JQ Image Drag by <a href="http://www.puneetk.com">Puneet Kalra</a>
+		</footer>
+	</body>
+</html>
