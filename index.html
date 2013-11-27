@@ -1,61 +1,128 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>JQ Image Drag</title>
-		<link href="http://fonts.googleapis.com/css?family=Antic+Didone:regular" rel="stylesheet" type="text/css" class="style">
-		<!-- add jQuery & UI -->
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JQ Image Drag</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JQ Image Drag - jQuery Image Drag plugin like Facebook Cover Picture and Thumbnails.">
+    <meta name="author" content="Puneet Kalra (@puneetkay)">
 
-		<!-- add JQ Image Drag plugin -->
-		<script type="text/javascript" src="script/jquery.imagedrag.js"></script>
-		<script type="text/javascript">
-			$(function(){
+    <!-- styles -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/demo.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
 
-				$('.wrap').imagedrag({
-					input: "#output",
-					position: "middle"
-				});
+    <!-- add jQuery & UI -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 
-			});
-		</script>
-		<style type="text/css">
-			* {
-				margin:0;
-				padding: 0;
-				text-align: center;
-				font-family: 'Antic Didone';
-			}
-			main {
-				display: block;
-			}
-			.wrap {
-				width: 938px;
-				height: 280px;
-				overflow: hidden;
-				margin: auto;
+    <!-- add JQ Image Drag plugin -->
+    <script type="text/javascript" src="script/jquery.imagedrag.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
 
-			}
-		</style>
-	</head>
-	<body>
-		<header>
-			JQ Image Drag - jQuery Image Drag plugin like Facebook Cover Picture.
-		</header>
-		<main>
-			<article>
-				<h1>Welcome to JQ Image Drag demo page</h1>
-				<br/><br/>
-				<div class="wrap">
-					<img src="image.jpg" alt="JQ Image Drag" style="width:1024px; height:768px;"/>
-				</div>
-				<br/><br/>
-				Position: <input id="output" />
-				<br/><br/>
-			</article>
-		</main>
-		<footer>
-			JQ Image Drag by <a href="http://www.puneetk.com">Puneet Kalra</a>
-		</footer>
-	</body>
+        $('.wrap').imagedrag({
+          input: "#output",
+          position: "middle",
+          attribute: "html"
+        });
+
+      });
+    </script>
+    <style type="text/css">
+      .wrap {
+        width: 938px;
+        height: 280px;
+        overflow: hidden;
+        margin: auto;
+        cursor: -webkit-grab;
+
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right" data-step="5" data-intro="Get it, use it.">
+          <li><a href="https://github.com/puneetkay/JQ-Image-Drag/releases">Download</a></li>
+          <li><a href="https://github.com/puneetkay/JQ-Image-Drag">Github</a></li>
+          <li><a href="https://twitter.com/puneetkay">@puneetkay</a></li>
+        </ul>
+        <h3 class="muted">JQ Image Drag</h3>
+      </div>
+
+      <hr>
+
+      <div class="jumbotron">
+        <div class="wrap">
+          <img src="image.jpg" alt="JQ Image Drag" style="width:1024px; height:768px;"/>
+        </div>
+        <hr>
+        <p class="lead" data-step="4" data-intro="Let's try it. It's free and open-source.">Allows images to be positioned using mouse drag just like Facebook cover pictures and thumbnails.</p>
+        <strong>Example?</strong> Position the image above using mouse (currently positioned at <span id="output"></span>).
+        <div style="margin-top: 30px;">
+          <iframe src="http://ghbtns.com/github-btn.html?user=puneetkay&repo=JQ-Image-Drag&type=watch&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> 
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://puneetk.com/jq-image-drag/">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium" data-href="http://puneetk.com/jq-image-drag/"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+<script id='fbop8ca'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=puneet.kay&button=compact&url=http%3A%2F%2Fpuneetk.com%2Fjq-image-drag%2F';f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbop8ca');</script>
+
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row-fluid marketing">
+        <div class="span6" data-step="2" data-intro="Ok, wasn't that fun?" data-position='right'>
+          <h4>Easy to Use</h4>
+          <p>Just include the js file and call <code>$('#elem').imagedrag();</code> in your js code.</p>
+
+          <h4>Fast &amp; Small</h4>
+          <p><strong>1 KB</strong> JavaScript (minified). That's all.</p>
+
+          <h4>Browser Compatibllity</h4>
+          <p>Better compatibility is on the roadmap, but currently it should work in recent versions of Firefox, Chrome and IE.</p>
+
+          <h4>Free &amp; Open-Source</h4>
+          <p>Free and open-source (including commercial use). Published under MIT license.</p>
+        </div>
+
+        <div class="span6" data-step="3" data-intro="More features, more fun."  data-position='left'>
+          <h4>Settings</h4>
+          <p><code>input</code> // Selector for output value.<br /><br/>
+              <code>attribute</code> // Target attribute on selector.<br />
+              default value: 'value'<br/><br/>
+              <code>position</code> // Default position for image.<br/>
+              options: top, middle, bottom, or specific margin.<br />
+              default value: 'middle'<br/><br/>
+              <code>cursor</code> // Cursor type on image drag.<br/>
+              default value: 'move'</p>
+
+          <h4>Developed with &lt;3</h4>
+          <p>With <i class="icon-heart"></i> by <a href='http://puneetk.com/' target="_blank" title="Puneet Kalra">Puneet Kalra</a>.</p>
+        </div>
+      </div>
+
+      <hr>
+      <div class="footer">
+        <p>&copy; <a href='http://puneetk.com/' target="_blank" title="Puneet Kalra">Puneet Kalra</a> 2013 - under MIT license.</p>
+      </div>
+    </div>
+  </body>
 </html>

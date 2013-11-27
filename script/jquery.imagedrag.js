@@ -1,5 +1,5 @@
 /*
- * JQ Image Drag - Alpha v1.0 - 26/09/2013
+ * JQ Image Drag - v1.1 - 27/11/2013
  * https://github.com/puneetkay/JQ-Image-Drag
  *
  * Copyright (c) 2013 Puneet Kalra
@@ -59,7 +59,10 @@
                     }
                 	// Set default position
                 	img.css("top", position);
-                	input.val(position);
+                	if(o.attribute == 'html')
+                		input.html(position);	
+                	else
+                		input.attr(o.attribute,position);	
                 },
                 drag: function (event, ui) {
                     var position = ui.position.top;
@@ -72,8 +75,10 @@
                     if (position < maxMargin) {
                         ui.position.top = maxMargin;
                     }
-
-                    input.val(ui.position.top + "px");
+                    if(o.attribute == 'html')
+                		input.html(ui.position.top + "px");	
+                	else
+                		input.attr(o.attribute,ui.position.top + "px");
                 }
 			});
 
@@ -82,9 +87,10 @@
 
 		// Default values
 		var defaults = {
-			input: "#topMargin", // Selector for top margin.
-			position: 'top', // top, middle, bottom, or specific margin.
-			cursor: 'move' // Cursor type for image
+			input: "#output", // Selector for top margin.
+			attribute: "value", // Target attribute for selector. 
+			position: 'middle', // top, middle, bottom, or specific margin.
+			cursor: 'move' // Cursor type for image.
 		};
 		
 		// Merge options with defaults.
