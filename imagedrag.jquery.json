@@ -1,0 +1,32 @@
+{
+    "name": "imagedrag",
+    "title": "JQ Image Drag",
+    "description": "jQuery Image Drag plugin like Facebook Cover Picture and Thumbnails.",
+    "keywords": [
+        "image",
+        "drag",
+        "position",
+        "facebook"
+    ],
+    "version": "1.1",
+    "author": {
+        "name": "Puneet Kalra",
+        "email" : "hello@puneetk.com",
+        "url": "https://www.puneetk.com"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/puneetkay/JQ-Image-Drag/blob/master/LICENSE"
+        }
+    ],
+    "bugs": "https://github.com/puneetkay/JQ-Image-Drag/issues",
+    "homepage": "http://puneetk.com/jq-image-drag/",
+    "demo": "http://puneetk.com/jq-image-drag/",
+    "docs": "http://puneetk.com/jq-image-drag/",
+    "download": "https://github.com/puneetkay/JQ-Image-Drag/releases",
+    "dependencies": {
+        "jquery": "1.8.2",
+        "jquery-ui": "1.10.2"
+    }
+}
