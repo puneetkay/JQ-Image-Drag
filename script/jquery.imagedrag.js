@@ -44,6 +44,7 @@
 
 			img.draggable({
 				axis: "y", //drag vertically only
+				scroll: false, // do not autocroll container.
 				cursor: o.cursor, 
 				create: function () {
                     // Get default position here.
